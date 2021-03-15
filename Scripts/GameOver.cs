@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class GameOver : MonoBehaviour
 {   
     public static bool isPlayerDead = false;
@@ -16,7 +18,9 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
      if(isPlayerDead){
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
          Time.timeScale=0;
          gameOver.enabled = true;
      }

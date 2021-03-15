@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System;
+using System.Timers;
 public class Restart : MonoBehaviour
 {
     private float HighScore=0;
@@ -19,7 +20,7 @@ public class Restart : MonoBehaviour
             PlayerScore.playerScore=0;
             GameOver.isPlayerDead = false;
             Time.timeScale=1;
-
+                
             SceneManager.LoadScene("SampleScene");
         }
     }

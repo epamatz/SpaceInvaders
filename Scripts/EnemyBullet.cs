@@ -24,6 +24,7 @@ public class EnemyBullet : MonoBehaviour
         if(other.tag == "Player"){
             Destroy (other.gameObject);
             Destroy (gameObject);
+            GameOver.isPlayerDead=true;
         }
         else if (other.tag =="Base"){
             GameObject playerBase = other.gameObject;

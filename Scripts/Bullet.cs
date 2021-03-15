@@ -25,6 +25,21 @@ public class Bullet : MonoBehaviour
         Destroy (other.gameObject);
         Destroy (gameObject);
         PlayerScore.playerScore+=10;
+      }      
+      if(other.tag == "Enemy2"){
+        Destroy (other.gameObject);
+        Destroy (gameObject);
+        PlayerScore.playerScore+=20;
+      }
+      if(other.tag == "Enemy3"){
+        Destroy (other.gameObject);
+        Destroy (gameObject);
+        PlayerScore.playerScore+=30;
+      }
+      if(other.tag == "Enemy4"){
+        Destroy (other.gameObject);
+        Destroy (gameObject);
+        PlayerScore.playerScore+=40;
       }
       else if (other.tag =="Base")
        Destroy (gameObject);

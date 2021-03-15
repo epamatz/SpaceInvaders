@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         return;
       }
 
-      if(Random.value >=fireRate){
+      if(Random.Range(0f, 200f) < 1){
         Instantiate(shot, enemy.position, enemy.rotation);
       }
 
